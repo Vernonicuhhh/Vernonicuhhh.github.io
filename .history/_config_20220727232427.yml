@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Veronica Diaz"
-  avatar           : "pfp.png"
+  avatar           : "profile.png"
   bio              : "Robotics | Astrophysics | Data Science"
   location         : "Buena Park"
   employer         :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/Vernonicuhhh"
+  github           : "academicpages"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/veronica-diaz-728808216/"
-  orcid            : #"http://orcid.org/yourorcidurl"
+  linkedin         :
+  orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : #"replacethistwitterhandle"
+  twitter          : "replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
