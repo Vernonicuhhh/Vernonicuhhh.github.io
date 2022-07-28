@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Veronica Diaz"
-  avatar           : "images/pfp.jpg"
+  avatar           : "pfp.png"
   bio              : "Robotics | Astrophysics | Data Science"
   location         : "Buena Park"
   employer         :
