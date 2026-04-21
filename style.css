@@ -45,7 +45,8 @@ ul.sublist li::marker{
 }
 
 a{
-    color: yellow;
+    color:#FF6B00; 
+
     text-decoration: none;
 }
 
@@ -54,5 +55,5 @@ a:hover{
 }
 
 p{
-    color: #00FF00;
+    color: #5ebd78;
 }
