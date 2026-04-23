@@ -66,14 +66,20 @@ p{
 
 .card{
     background: #242424;
-    border: 0.5px solid #333;
+    border: 1.5px solid #333;
     border-radius: 15px;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     position: relative;
 }
 
+.card:hover{
+    border: 1.5px solid #464646;
+    transition-duration: 300ms;
+}
+
 .card-title {
-    color: #e07b39;
     font-size: 0.9rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
