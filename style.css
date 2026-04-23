@@ -20,7 +20,7 @@ body {
     overflow-wrap: break-word;
 }
 
-h1{
+h1, h2, h3{
     color: white;
 }
 
@@ -56,4 +56,72 @@ a:hover{
 
 p{
     color: #5ebd78;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+}
+
+.card{
+    background: #242424;
+    border: 0.5px solid #333;
+    border-radius: 15px;
+    padding: 1rem;
+    position: relative;
+}
+
+.card-title {
+    color: #e07b39;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+ 
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+ 
+.card-tag {
+    font-size: 0.65rem;
+    padding: 1px 7px;
+    border-radius: 15px;
+    background: #2d2d2d;
+    border: 0.5px solid #444;
+    color: #5ebd78;
+}
+ 
+.card-content {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.card-content > p {
+    color: white;
+}
+.card-links {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: .5rem;
+}
+ 
+.card-links a {
+    font-size: 0.72rem;
+    color: #e07b39;
+    text-decoration: none;
+    opacity: 0.8;
+}
+ 
+.card-links a:hover {
+    opacity: 1;
+}
+
+img{
+    max-width: 7rem;
+    max-height: 7rem; 
 }
