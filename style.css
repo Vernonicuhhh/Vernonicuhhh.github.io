@@ -5,49 +5,60 @@ html{
 }
 
 .container {
-    max-width: 640px;
     margin: 0 auto;
     padding: 2rem 2rem;
 }
 
 body {
-    color: black;
+    background-color: #444545;
     font-family: monospace;
-    font-size: 16px;
-    line-height: 1.4;
     margin: 0;
     min-height: 100%;
     overflow-wrap: break-word;
+    line-height: 1.6;
 }
 
-h1, h2, h3{
-    color: white;
+h1 {
+    color: #B5FFE9;
+    font-size: 2.5rem;     
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.5rem;     
+    color: #B5FFE9;
+    font-weight: 500;
+}
+
+p, li {
+    font-size: 1rem;       
 }
 
 text{
-    color:white;
+    color:#C9C9C9;
 }
 
 ul{
     list-style-type: square;
 }
 li{
-    color: white;
+    color: #C9C9C9;
 }
 
-ul > li::marker{
-    content: "* ";
-    font-weight: bolder;
-}
 ul.sublist li::marker{
     content: "- ";
     font-weight: 100;
 }
 
 a{
-    color:#FF6B00; 
-
     text-decoration: none;
+    color: #C9C9C9;
+    font-size: 1.125rem;  
+}
+.selected{
+    color: #CEABB1; 
+
 }
 
 a:hover{
@@ -55,7 +66,7 @@ a:hover{
 }
 
 p{
-    color: #5ebd78;
+    color: #C9C9C9;
 }
 
 .projects-grid{
@@ -65,6 +76,7 @@ p{
 }
 
 .card{
+    color: white;
     background: #242424;
     border: 1.5px solid #333;
     border-radius: 15px;
@@ -107,7 +119,7 @@ p{
 }
 
 .card-content > p {
-    color: white;
+    color: #C9C9C9;
 }
 .card-links {
     display: flex;
@@ -130,4 +142,19 @@ p{
 img{
     max-width: 7rem;
     max-height: 7rem; 
+}
+
+#navigation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    padding-inline-start: 0;
+    padding-bottom: .5rem;
+}
+
+#navigation li{
+    list-style-type: none;
+    font-size: larger;
 }
