@@ -22,4 +22,5 @@
   border-color: black;
   flex: 1;           
   position: relative;
+  opacity: .1;
 }

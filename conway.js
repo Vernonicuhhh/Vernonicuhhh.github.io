@@ -7,7 +7,6 @@ function loadGrid(numRows, numCols){
         for(let j = 0; j < numCols ; j++){
             const cell = document.createElement('div');
             cell.classList.add('grid-cell');
-            cell.textContent = 'H';
             row.appendChild(cell);
         }
         grid.appendChild(row);
@@ -59,7 +58,7 @@ function paint(grid, numRows, numCols){
     for(let i = 0; i < numRows ; i++){
         const row = document.getElementById(`grid-row-${i}`) 
         for(let j = 0; j < numCols ; j++){
-            row.children[j].style.backgroundColor =  grid[i][j] ? 'blue' : 'black';
+            row.children[j].style.backgroundColor =  grid[i][j] ? '#B5FFE9' : 'black';
         }
     }
 
