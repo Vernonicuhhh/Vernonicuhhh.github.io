@@ -58,7 +58,7 @@ function paint(grid, numRows, numCols){
     for(let i = 0; i < numRows ; i++){
         const row = document.getElementById(`grid-row-${i}`) 
         for(let j = 0; j < numCols ; j++){
-            row.children[j].style.backgroundColor =  grid[i][j] ? '#B5FFE9' : 'black';
+            row.children[j].style.backgroundColor =  grid[i][j] ? '#B5FFE9' : '#1a1a1a';
         }
     }
 
@@ -126,3 +126,29 @@ function conwayAnim(){
     setTimeout(conwayAnim, 1000);
 }
 conwayAnim();
+
+async function changePage(pageName, buttonId){
+    const response = await fetch(`${pageName}.html`);
+    const htmlContent = await response.text();
+    document.getElementById('content').innerHTML = htmlContent;
+
+
+    document.querySelectorAll('.selected').forEach(e => {
+        e.classList.remove('selected');
+    })
+    document.getElementById(buttonId).classList.add('selected');
+}
+
+document.getElementById('homepage').addEventListener('click', async (e) => {
+    await changePage('homepage', e.target.id);
+})
+
+document.getElementById('projects').addEventListener('click', async (e) => {
+    await changePage('projects', e.target.id);
+})
+
+document.getElementById('publications').addEventListener('click', async (e) => {
+    await changePage('publications', e.target.id);
+})
+
+changePage('homepage', 'homepage');

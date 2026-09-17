@@ -6,6 +6,7 @@ html{
 
 .container {
     margin: 0 auto;
+    max-width: 1040px;
     padding: 2rem 2rem;
 }
 
@@ -55,6 +56,7 @@ a{
     text-decoration: none;
     color: #C9C9C9;
     font-size: 1.125rem;  
+    cursor: pointer;
 }
 .selected{
     color: #CEABB1; 
@@ -73,70 +75,6 @@ p{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 3rem;
-}
-
-.card{
-    color: white;
-    background: #242424;
-    border: 1.5px solid #333;
-    border-radius: 15px;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: relative;
-}
-
-.card:hover{
-    border: 1.5px solid #464646;
-    transition-duration: 300ms;
-}
-
-.card-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 0.4rem;
-}
- 
-.card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
- 
-.card-tag {
-    font-size: 0.65rem;
-    padding: 1px 7px;
-    border-radius: 15px;
-    background: #2d2d2d;
-    border: 0.5px solid #444;
-    color: #5ebd78;
-}
- 
-.card-content {
-    font-size: 0.75rem;
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
-}
-
-.card-content > p {
-    color: #C9C9C9;
-}
-.card-links {
-    display: flex;
-    gap: 12px;
-    position: absolute;
-    bottom: .5rem;
-}
- 
-.card-links a {
-    font-size: 0.72rem;
-    color: #FF6B00;
-    text-decoration: none;
-    opacity: 0.8;
-}
- 
-.card-links a:hover {
-    opacity: 1;
 }
 
 img{
@@ -161,6 +99,13 @@ img{
 
 .container {
 	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s;
+}
+
+.page{
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
