@@ -127,28 +127,3 @@ function conwayAnim(){
 }
 conwayAnim();
 
-async function changePage(pageName, buttonId){
-    const response = await fetch(`${pageName}.html`);
-    const htmlContent = await response.text();
-    document.getElementById('content').innerHTML = htmlContent;
-
-
-    document.querySelectorAll('.selected').forEach(e => {
-        e.classList.remove('selected');
-    })
-    document.getElementById(buttonId).classList.add('selected');
-}
-
-document.getElementById('homepage').addEventListener('click', async (e) => {
-    await changePage('homepage', e.target.id);
-})
-
-document.getElementById('projects').addEventListener('click', async (e) => {
-    await changePage('projects', e.target.id);
-})
-
-document.getElementById('publications').addEventListener('click', async (e) => {
-    await changePage('publications', e.target.id);
-})
-
-changePage('homepage', 'homepage');

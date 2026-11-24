@@ -1,24 +1,33 @@
 #grid {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;        
+  width: 100%;
+  height: 100vh;   
+  height: 100dvh;  
   display: flex;
   flex-direction: column;
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .grid-row {
   display: flex;
-  flex: 1;          
-  flex-wrap: nowrap; 
+  flex: 1;
+  flex-wrap: nowrap;
+  min-height: 0;
 }
 
 .grid-cell {
   background: aliceblue;
-  flex: 1;           
+  flex: 1;
+  min-width: 0;
   position: relative;
   opacity: .2;
+}
+
+@media (max-width: 600px) {
+  .grid-cell {
+    opacity: .15;
+  }
 }

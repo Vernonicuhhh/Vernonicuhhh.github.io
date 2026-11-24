@@ -3,6 +3,7 @@ html{
     scroll-behavior: smooth;
     height: 100%;
     scrollbar-gutter: stable;
+    zoom: 90%;
 }
 
 .container {
