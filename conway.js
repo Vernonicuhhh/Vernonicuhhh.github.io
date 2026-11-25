@@ -64,8 +64,11 @@ function paint(grid, numRows, numCols){
 
 }
 
-const ROWS = 27;
-const COLS = 48;
+const mq = window.matchMedia("(max-width: 600px)");
+let mobileScreen = mq.matches;
+
+const ROWS = mobileScreen ? 15 : 27;
+const COLS = mobileScreen ? 15 : 48;
 let grid = Array.from({ length: ROWS }, () => Array(COLS).fill(0));
 
 const pulsar = [
@@ -113,10 +116,16 @@ const gosperGliderGun = [
   [8,12],[8,13]
 ];
 
-gosperGliderGun.forEach(([r, c]) => grid[r + 1][c + 6] = 1);
-pulsar.forEach(([r, c]) => grid[r + 13][c + 2] = 1);
-pentadecathlon.forEach(([r, c]) => grid[r + 9][c + 43] = 1);
-acorn.forEach(([r, c]) => grid[r + 22][c + 28] = 1);
+if(!mobileScreen){
+    gosperGliderGun.forEach(([r, c]) => grid[r + 1][c + 6] = 1);
+    pulsar.forEach(([r, c]) => grid[r + 13][c + 2] = 1);
+    pentadecathlon.forEach(([r, c]) => grid[r + 9][c + 43] = 1);
+    acorn.forEach(([r, c]) => grid[r + 22][c + 28] = 1);
+}
+else{
+    pulsar.forEach(([r, c]) => grid[r + 1][c + 2] = 1);
+    acorn.forEach(([r, c]) => grid[r + 2][c + 5] = 1);
+}
 
 loadGrid(ROWS, COLS);
 function conwayAnim(){
